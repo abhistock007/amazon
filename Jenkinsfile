@@ -2,8 +2,10 @@ pipeline {
 	agent any
 	
 	stages {
-	    stage('Checkout') {
-	        steps {
+	    stage('Checkout') 
+              {
+	        steps 
+                     {
 			checkout scm			       
 		      }}
 		stage('Build') {
@@ -14,5 +16,11 @@ pipeline {
 		    steps {
 			
 			sh 'cp /home/ubuntu/Documents/grras/amazon/target/amazon.war /home/ubuntu/Downloads/apache-tomcat-9.0.71/webapps'
-	}
-}}}
+	              }}
+          post
+              {
+              always
+              {
+              emailext body: 'tusharmangre007@gmail.com', subject: 'Email Notification', to: 'tusharmangre007@gmail.com'
+              }}
+}}
