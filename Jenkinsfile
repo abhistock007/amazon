@@ -13,6 +13,6 @@ pipeline {
 		stage('Deployment'){
 		    steps {
 			
-			sh 'cp target/amazon.war /home/ubuntu/Documents/apache-tomcat-9.0.71/webapps'
+			sh 'cp /home/ubuntu/Documents/grras/amazon/target/amazon.war /home/ubuntu/Documents/apache-tomcat-9.0.71/webapps'
 	}
 }}}
