@@ -8,11 +8,11 @@ pipeline {
 		      }}
 		stage('Build') {
 	           steps {
-			  sh '/home/ubuntu/Documents/grras/apache-maven-3.6.0/bin/mvn install'
+			  sh '/home/ubuntu/Downloads/apache-maven-3.6.0/bin/mvn install'
 	              }}
 		stage('Deployment'){
 		    steps {
 			
-			sh 'cp /home/ubuntu/Documents/grras/amazon/target/amazon.war /home/ubuntu/Documents/apache-tomcat-9.0.71/webapps'
+			sh 'cp /home/ubuntu/Documents/grras/amazon/target/amazon.war /home/ubuntu/Downloads/apache-tomcat-9.0.71/webapps'
 	}
 }}}
